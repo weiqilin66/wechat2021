@@ -15,9 +15,10 @@
     "pages/pay/index"
   ],
   "style": "v2",
-  "tabBar": {
-    "color": "#999",
-    "selectedColor": "#ff2d4a",
+# 配置下面标题栏
+  "tabBar": {  
+    "color": "#999",//默认颜色
+    "selectedColor": "#ff2d4a", //选择的颜色
     "backgroundColor": "#fafafa",
     "position": "bottom",
     "borderStyle": "black",
@@ -54,8 +55,8 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarBackgroundColor": "#eb4450",//顶部窗口颜色
     "navigationBarTitleText": "我是标题",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white" //顶部标题字体颜色
   }
 }
