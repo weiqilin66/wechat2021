@@ -9,6 +9,7 @@ Page({
   data: {
     swiperList: [],
     cateList:[],
+    floorList:[],
     //模拟返回数据
     resp: {
 
@@ -58,6 +59,7 @@ Page({
     // })
     this.getSwiperList();
     this.getCateList();
+    this.getfloorList();
   },
   /*获取轮播图 */
   getSwiperList() {
@@ -72,15 +74,24 @@ Page({
   },
   /*获取导航栏数据 */
   getCateList() {
-    // 封装后请求 防止原生请求的回调地狱
     request({
       url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems'
     }).then(result => {
       this.setData({
         cateList: result.data.message
       })
-    })//后续请求继续then
+    })
   },
+    /*获取导航栏数据 */
+    getfloorList() {
+      request({
+        url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata'
+      }).then(result => {
+        this.setData({
+          floorList: result.data.message
+        })
+      })
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
