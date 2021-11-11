@@ -1,5 +1,25 @@
 <!-- <view>首页</view>
 <view><text class="iconfont icon-shoucang"></text></view> -->
 <view class="index_class">
+    <!-- 搜索框 -->
 <searchInput></searchInput>
+<!-- 轮播图 -->
+<view class="index_swiper">
+    <!-- swiper 默认宽度百分百 150px image默认320*240px 宽度
+    原图宽高750*340
+    设计: 高度自适应 宽度百分百
+    widthFix 宽高自适应
+    -->
+    <!-- 属性默认 true -->
+    <swiper autoplay indicator-dots circular>
+        <swiper-item
+          wx:for="{{swiperList}}"
+          wx:key="goods_id"
+        >
+        <navigator >
+            <image mode = "widthFix" src="{{item.image_src}}" />
+        </navigator>
+        </swiper-item>
+    </swiper>
+</view>
 </view>

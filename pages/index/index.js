@@ -1,3 +1,6 @@
+// 引入函数
+import {request} from "../../request/index.js"
+
 Page({
 
   /**
@@ -40,20 +43,26 @@ Page({
    */
   onLoad: function (options) {
     
-    // 发送异步请求 生产环境需要配置白名单域名 ,开发环境详情配置中修改不校验
-    wx.request({
-      url: 'https://www.baidu.com',
-      
-      success:(result)=>{
-        console.log("request success");
-        console.log(this.data.resp);
-        // 修改数据必须调用setData
-        this.setData({
-          swiperList:this.data.resp.message
-        })
-      }
-      
-    })
+    // 原生发送异步请求 生产环境需要配置白名单域名 ,开发环境详情配置中修改不校验
+    // wx.request({
+    //   url: 'https://www.baidu.com',      
+    //   success:(result)=>{
+    //     console.log("request success");
+    //     console.log(this.data.resp);
+    //     // 修改数据必须调用setData
+    //     this.setData({
+    //       swiperList:this.data.resp.message
+    //     })
+    //   }     
+    // })
+    // 封装后请求
+    request({
+      url: 'https://www.baidu.com'      
+    }).then(result =>{
+      this.setData({
+        swiperList:this.data.resp.message
+      })
+    })//后续请求继续then
   },
 
   /**
