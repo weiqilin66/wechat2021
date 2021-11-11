@@ -4,20 +4,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperList:[]
+    swiperList:[],
+
+    //模拟返回数据
+    resp : {
+      "message": [
+          {
+              "image_src": "https://api-hmugo-web.itheima.net/pyg/banner1.png",
+              "open_type": "navigate",
+              "goods_id": 129,
+              "navigator_url": "/pages/goods_detail/index?goods_id=129"
+          },
+          {
+            "image_src": "https://api-hmugo-web.itheima.net/pyg/banner1.png",
+            "open_type": "navigate",
+            "goods_id": 121,
+            "navigator_url": "/pages/goods_detail/index?goods_id=121"
+        }
+      ],
+      "meta": {
+          "msg": "获取成功",
+          "status": 200
+      }
+  }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //模拟返回数据
-    var data = {"":""}
+    
     // 发送异步请求
     wx.request({
       url: 'https://www.baidu.com',
+    
       success:(result)=>{
         console.log("request success");
+        console.log(this.data.resp);
+        swiperList:this.data.resp.message
       }
       
     })
