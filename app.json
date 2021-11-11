@@ -27,28 +27,24 @@
         "text": "首页",
         "iconPath": "icons/home.png",
         "selectedIconPath": "icons/home-o.png"
-
       },
       {
         "pagePath": "pages/category/index",
         "text": "分类",
         "iconPath": "icons/menu.png",
         "selectedIconPath": "icons/menu-o.png"
-
       },
       {
         "pagePath": "pages/cart/index",
         "text": "购物车",
         "iconPath": "icons/cart.png",
         "selectedIconPath": "icons/cart-o.png"
-
       },
       {
         "pagePath": "pages/user/index",
         "text": "我的",
         "iconPath": "icons/my.png",
         "selectedIconPath": "icons/my-o.png"
-
       }
     ]
   },
@@ -57,5 +53,6 @@
     "navigationBarBackgroundColor": "#eb4450",
     "navigationBarTitleText": "我是标题",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
