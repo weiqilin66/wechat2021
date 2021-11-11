@@ -1,2 +1,5 @@
-<view>首页</view>
-<view><text class="iconfont icon-shoucang"></text></view>
+<!-- <view>首页</view>
+<view><text class="iconfont icon-shoucang"></text></view> -->
+<view class="index_class">
+<searchInput></searchInput>
+</view>
