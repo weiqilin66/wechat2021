@@ -16,11 +16,17 @@ Page({
               "navigator_url": "/pages/goods_detail/index?goods_id=129"
           },
           {
-            "image_src": "https://api-hmugo-web.itheima.net/pyg/banner1.png",
+            "image_src": "https://api-hmugo-web.itheima.net/pyg/banner3.png",
             "open_type": "navigate",
             "goods_id": 121,
             "navigator_url": "/pages/goods_detail/index?goods_id=121"
-        }
+        },
+        {
+          "image_src": "https://api-hmugo-web.itheima.net/pyg/banner2.png",
+          "open_type": "navigate",
+          "goods_id": 122,
+          "navigator_url": "/pages/goods_detail/index?goods_id=122"
+      }
       ],
       "meta": {
           "msg": "获取成功",
@@ -34,14 +40,17 @@ Page({
    */
   onLoad: function (options) {
     
-    // 发送异步请求
+    // 发送异步请求 生产环境需要配置白名单域名 ,开发环境详情配置中修改不校验
     wx.request({
       url: 'https://www.baidu.com',
-    
+      
       success:(result)=>{
         console.log("request success");
         console.log(this.data.resp);
-        swiperList:this.data.resp.message
+        // 修改数据必须调用setData
+        this.setData({
+          swiperList:this.data.resp.message
+        })
       }
       
     })
