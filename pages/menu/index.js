@@ -24,7 +24,6 @@ Page({
     },
     // e事件源
     handleItemTap(e){
-        console.log(111);
         // 1获取被点击的标题身上的索引
         const {index} = e.currentTarget.dataset;
         console.log(index);
