@@ -10,6 +10,7 @@ Page({
     swiperList: [],
     cateList:[],
     floorList:[],
+   
     //模拟返回数据
     resp: {
 
@@ -92,6 +93,8 @@ Page({
         })
       })
     },
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

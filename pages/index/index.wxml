@@ -2,53 +2,41 @@
 <view><text class="iconfont icon-shoucang"></text></view> -->
 <view class="index_class">
     <!-- 搜索框 -->
-<searchInput></searchInput>
-<!-- 轮播图 -->
-<view class="index_swiper">
-    <!-- swiper 默认宽度百分百 150px image默认320*240px 宽度
+    <searchInput></searchInput>
+    <!-- 轮播图 -->
+    <view class="index_swiper">
+        <!-- swiper 默认宽度百分百 150px image默认320*240px 宽度
     原图宽高750*340
     设计: 高度自适应 宽度百分百
-    widthFix 宽高自适应
-    -->
-    <!-- autoplay indicator-dots circular属性默认 true -->
-    <swiper autoplay indicator-dots circular>
-        <swiper-item
-          wx:for="{{swiperList}}"
-          wx:key="goods_id"
-        >
-        <navigator >
-            <image mode = "widthFix" src="{{item.image_src}}" />
-        </navigator>
-        </swiper-item>
-    </swiper>
-</view>
-
-<!-- 导航栏 -->
-<view class="index_cate">
-    <navigator 
-      wx:for="{{cateList}}"
-      wx:key="name"
-    >
-    <image src="{{item.image_src}}" mode = "widthFix"/>
-    </navigator>
-</view>
-
-<!-- 楼层 -->
-<view class="index_floor">
-    <view class="floor_group" 
-     wx:for="{{floorList}}"
-     wx:for-item="item1"
-     wx:for-index="index1"
-     wx:key="floor_title"
-    >
-        <!-- 标题 -->
-        <view class="floor_title">
-            <image mode = "widthFix" src="{{item1.floor_title.image_src}}" />
-        </view>
-        <!-- 内容 -->
-        <view class="floor_content"></view>
+    widthFix 宽高自适应 -->
+        <!-- autoplay indicator-dots circular属性默认 true -->
+        <swiper autoplay indicator-dots circular>
+            <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+                <navigator>
+                    <image mode="widthFix" src="{{item.image_src}}" />
+                </navigator>
+            </swiper-item>
+        </swiper>
     </view>
-    
-</view>
-
+    <!-- 导航栏 -->
+    <view class="index_cate">
+        <navigator wx:for="{{cateList}}" wx:key="name">
+            <image src="{{item.image_src}}" mode="widthFix" />
+        </navigator>
+    </view>
+    <!-- 楼层 -->
+    <view class="index_floor">
+        <view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
+            <!-- 标题 -->
+            <view class="floor_title">
+                <image mode="widthFix" src="{{item1.floor_title.image_src}}" />
+            </view>
+            <!-- 内容 -->
+            <view class="floor_list">
+                <navigator wx:for="{{item1.product_list}}" wx:key="name" wx:for-item="item2" wx:for-index="index2">
+                    <image src="{{item2.image_src}}" mode="{{index2==0?'widthFix':'scaleToFill'}}" />
+                </navigator>
+            </view>
+        </view>
+    </view>
 </view>

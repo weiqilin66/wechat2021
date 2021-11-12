@@ -1,7 +1,7 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/category/index",
+        "pages/menu/index",
         "pages/goods_list/index",
         "pages/goods_detail/index",
         "pages/cart/index",
@@ -29,7 +29,7 @@
                 "selectedIconPath": "icons/home-o.png"
             },
             {
-                "pagePath": "pages/category/index",
+                "pagePath": "pages/menu/index",
                 "text": "分类",
                 "iconPath": "icons/menu.png",
                 "selectedIconPath": "icons/menu-o.png"
