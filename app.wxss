@@ -14,3 +14,6 @@ page{
 /*  统一定义字体大小 1px =2rpx  */
     font-size: 28rpx;
 }
+image{
+    width: 100%;
+}

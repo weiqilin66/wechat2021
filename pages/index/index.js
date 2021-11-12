@@ -52,7 +52,7 @@ Page({
     //   success:(result)=>{
     //     console.log("request success");
     //     console.log(this.data.resp);
-    //     // 修改数据必须调用setData
+    //     // 修改data中的数据必须调用setData 
     //     this.setData({
     //       swiperList:this.data.resp.message
     //     })
